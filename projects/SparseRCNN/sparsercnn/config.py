@@ -45,3 +45,10 @@ def add_sparsercnn_config(cfg):
     # Optimizer.
     cfg.SOLVER.OPTIMIZER = "ADAMW"
     cfg.SOLVER.BACKBONE_MULTIPLIER = 1.0
+
+    cfg.INPUT.CUSTOM_AUG = ''
+    cfg.INPUT.TRAIN_SIZE = 640
+    cfg.INPUT.TEST_SIZE = 640
+    cfg.INPUT.SCALE_RANGE = (0.1, 2.)
+    # 'default' for fixed short/ long edge, 'square' for max size=INPUT.SIZE
+    cfg.INPUT.TEST_INPUT_TYPE = 'default' 
