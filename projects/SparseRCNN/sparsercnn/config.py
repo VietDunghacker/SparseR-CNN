@@ -45,6 +45,7 @@ def add_sparsercnn_config(cfg):
     # Optimizer.
     cfg.SOLVER.OPTIMIZER = "ADAMW"
     cfg.SOLVER.BACKBONE_MULTIPLIER = 1.0
+    cfg.SOLVER.RESET_ITER = False
 
     cfg.INPUT.CUSTOM_AUG = ''
     cfg.INPUT.TRAIN_SIZE = 640
