@@ -11,6 +11,14 @@ def add_sparsercnn_config(cfg):
     """
     Add config for SparseRCNN.
     """
+    #Bi FPN
+    cfg.MODEL.BIFPN = CN()
+    cfg.MODEL.BIFPN.NUM_LEVELS = 5
+    cfg.MODEL.BIFPN.NUM_BIFPN = 6
+    cfg.MODEL.BIFPN.NORM = 'GN'
+    cfg.MODEL.BIFPN.OUT_CHANNELS = 160
+    cfg.MODEL.BIFPN.SEPARABLE_CONV = False
+
     cfg.MODEL.SparseRCNN = CN()
     cfg.MODEL.SparseRCNN.NUM_CLASSES = 80
     cfg.MODEL.SparseRCNN.NUM_PROPOSALS = 300
