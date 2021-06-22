@@ -230,7 +230,7 @@ def setup(args):
 	"""
 	cfg = get_cfg()
 	add_sparsercnn_config(cfg)
-	cfg.merge_from_file("/content/CenterNet2/projects/CenterNet2/configs/config.yaml")
+	cfg.merge_from_file("/content/SparseR-CNN/projects/SparseRCNN/configs/config.yaml")
 	cfg.DATASETS.TRAIN = ("celebrity_train",)
 	cfg.DATASETS.TEST = ("celebrity_valid",)
 	cfg.freeze()
